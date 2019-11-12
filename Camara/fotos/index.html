@@ -1,0 +1,49 @@
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
+	<title>Tomar foto con Javascript y PHP v3.0</title>	
+	<style>
+		@media only screen and (max-width: 700px) {
+			video {
+				max-width: 100%;
+			}
+		}
+		
+		head{
+			text-align:center;
+			width:400px;
+		}
+	</style>
+	<br><a align="right"class="btn btn-warning btn-xs" href="/AppNasa/Google/logout.php">Logout from Google</a>
+	
+</head>
+
+<body>
+	<h1>Tomar foto con JavaScript v3.0</h1>
+	<h1>Su ubicación actual es:</h1>
+	<div>
+		<body onload="loadLocation();">
+		<label id="long"></label> <br/>
+		<label id="latitud"></label> <br/>
+		<a id="link" target="_blank">Click para visitar el mapa</a>
+	</div>
+	<div>
+		<select name="listaDeDispositivos" id="listaDeDispositivos"></select>
+		<button type="button" class="btn btn-info btn-s"id="boton"><span class="glyphicon glyphicon-camera"></span> Tomar foto</button>
+		<p id="estado"></p>
+	</div>
+	
+	<br>
+	<video muted="muted" id="video"></video>
+	<canvas id="canvas" style="display: none;"></canvas>
+</body>
+<script src="script.js"></script>
+
+</html>
